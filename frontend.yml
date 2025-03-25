@@ -1,6 +1,7 @@
-- name: fronted playbook
+- name: frontend playbook
   hosts: all
-  tasks: yes
+  become: yes
+  tasks:
     - name: disable Default Nginx
       ansible.builtin.shell: dnf module disable nginx -y
 
